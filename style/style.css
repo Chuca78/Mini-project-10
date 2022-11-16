@@ -1,0 +1,98 @@
+/*  COLOR PALLETTE
+    https://coolors.co/ffd275-c03221-72705b-1a1b41-28c2ff
+    #343434 - dark grey
+    #72705B - med grey
+    #2F3061 - dark blue
+    rgb(47,48,97) - dark blue
+    #28C2FF - light blue
+    #C03221 - dark orange
+    #FFD275 - light orange
+    #FFE66D - yellow
+    #F7FFF7 - almost white
+*/
+
+
+/*  FONT FAMILIES
+font-family: 'Caveat', cursive;
+font-family: 'Montserrat', sans-serif;
+ */
+
+
+/* Global styles --------------------------------*/
+body{
+    color: #343434;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height:1.5;
+}
+
+h1, h2{
+    font-family: 'Montserrat', sans-serif;
+    /* removes the default bold from the headers */
+    font-weight:400;
+    /* removes excess margin space in the h1 and h2 */
+    margin:0;
+}
+
+h1{
+    font-size: 100px;
+    /* overrides the 1.5 line-height from the body */
+    line-height:1;
+}
+
+/* removes the automatic margin around the h2 elements */
+h2{
+    font-size: 50px;
+}
+
+.content-wrap{
+    /* sets default width of content inside of container (also centers it in container */
+    width:800px;
+    text-align: center;
+    /* removes top margins */
+    margin: 0 auto;
+    /* adds padding to the top of the container */
+    padding: 60px 0; 
+}
+
+header{
+    /* color:#1A1B41; */
+    /* background-color:#FFD275; */
+    text-align: center;
+    background: blue;
+    color: #F7FFF7;
+}
+
+/* styling for the employee cards */
+
+.cards header{
+    border-radius: 5% 5% 0 0;
+    background: red;
+    color: #F7FFF7;
+}
+
+/* all cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 20px;
+}
+
+/* individual cards */
+.card {
+    border: solid;
+    border-color: #72705B;
+    border-radius: 5%;
+    box-shadow: 10px 5px 5px grey;
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+}
+
+
+footer{
+    background: #343434;
+    color: #F7FFF7;
+}
+

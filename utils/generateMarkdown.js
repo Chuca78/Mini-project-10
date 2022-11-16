@@ -1,54 +1,73 @@
 
-
 function generateMarkdown(data) {
   return `
 
-  <!doctype html>
+<!doctype html>
 
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Team Profile Generator">
-    <title>Team Profile Generator</title>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Team Profile Generator">
+  <title>Team Profile Generator</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/style.css">
+
+</head>
   
-    <link rel="stylesheet" href="./style.css">
-  
-  </head>
-  
-  <body>
+<body>
+  <header>
+    <div class="content-wrap">
+      <h1>My Team</h1>
+    </div>
+  </header>
+
+  <div class="content-wrap">
+    <div class="cards">
+      <article class="card">
+          <header>
+          <h2>${data.manager_name}</h2>
+          <span class="material-icons">local_cafe</span>
+          <h3>Manager</h3>
+      </header>    
+      <div class="content">
+        <p>${data.manager_employee_id}</p>
+        <p>Email: ${data.manager_email}</p>
+        <p>Office Number: ${data.manager_office_number}</p>
+      </div>
+      </article>
+      <article class="card">
       <header>
-          <h1>My Team</h1>
-      </header>
-    
-        <section>
-          
-          <ul>
-            <li>${data.manager_name}</li>
-            <li>Employee ID: ${data.manager_employee_id}</li>
-            <li>Email: ${data.manager_email}</li>
-            <li>Office Number: ${data.manager_office_number}</li>
-          </ul>
-          <ul>
-            <li>${data.engineer_name}</li>
-            <li>${data.employee}</li>
-            <li>Employee ID: ${data.engineer_id}</li>
-            <li>Email: ${data.engineer_email}</li>
-            <li>GitHub: ${data.engineer_github}</li>
-          </ul>
-          <ul>
-            <li>${data.intern_name}</li>
-            <li>${data.employee2}</li>
-            <li>Employee ID: ${data.intern_id}</li>
-            <li>Email: ${data.intern_email}</li>
-            <li>School: ${data.intern_school}</li>
-          </ul>
-    
-      </section>
-  
-  </body>
-  </html>
+          <h2>${data.engineer_name}</h2>
+          <span class="material-icons">developer_mode</span>
+          <h3>${data.employee}</h3>
+      </header>    
+      <div class="content">
+        <p>Employee ID: ${data.engineer_id}</p>
+        <p>Email: ${data.engineer_email}</p>
+        <p>GitHub: ${data.engineer_github}</p>
+      </div>
+      </article>
+      <article class="card">
+        <header>
+            <h2>${data.intern_name}</h2>
+            <span class="material-icons">school</span>
+            <h3>${data.employee2}</h3>
+        </header>    
+        <div class="content">
+          <p>Employee ID: ${data.intern_id}</p>
+          <p>Email: ${data.intern_email}</p>
+          <p>School: ${data.intern_school}</p>
+        </div>
+      </article> 
+    </div>
+  </div>
 
+</body>
+</html>
 
 `;
 }

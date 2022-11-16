@@ -1,49 +1,69 @@
 
 
-  <!doctype html>
+<!doctype html>
 
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Team Profile Generator">
-    <title>Team Profile Generator</title>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Team Profile Generator">
+  <title>Team Profile Generator</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/style.css">
+
+</head>
   
-    <link rel="stylesheet" href="./style.css">
-  
-  </head>
-  
-  <body>
+<body>
+  <header>
+    <div class="content-wrap">
+      <h1>My Team</h1>
+    </div>
+  </header>
+
+  <div class="content-wrap">
+    <div class="cards">
+      <article class="card">
+          <header>
+          <h2>Big Boss</h2>
+          <span class="material-icons">local_cafe</span>
+          <h3>Manager</h3>
+      </header>    
+      <div class="content">
+        <p>123456</p>
+        <p>Email: BigBoss@email.com</p>
+        <p>Office Number: 123</p>
+      </div>
+      </article>
+      <article class="card">
       <header>
-          <h1>My Team</h1>
-      </header>
-    
-        <section>
-          
-          <ul>
-            <li>Big Boss</li>
-            <li>Employee ID: 123456</li>
-            <li>Email: BigBoss@email.com</li>
-            <li>Office Number: 123</li>
-          </ul>
-          <ul>
-            <li>Worker</li>
-            <li></li>
-            <li>Employee ID: 123456</li>
-            <li>Email: Engineer@email.com</li>
-            <li>GitHub: SuperEngineer</li>
-          </ul>
-          <ul>
-            <li>Shithead</li>
-            <li></li>
-            <li>Employee ID: 123456</li>
-            <li>Email: Intern@email.com</li>
-            <li>School: UT Austin</li>
-          </ul>
-    
-      </section>
-  
-  </body>
-  </html>
+          <h2>Worker</h2>
+          <span class="material-icons">developer_mode</span>
+          <h3>Engineer</h3>
+      </header>    
+      <div class="content">
+        <p>Employee ID: 123456</p>
+        <p>Email: Engineer@email.com</p>
+        <p>GitHub: SuperEngineer</p>
+      </div>
+      </article>
+      <article class="card">
+        <header>
+            <h2>Shithead</h2>
+            <span class="material-icons">school</span>
+            <h3>Intern</h3>
+        </header>    
+        <div class="content">
+          <p>Employee ID: 123456</p>
+          <p>Email: Intern@email.com</p>
+          <p>School: UT Austin</p>
+        </div>
+      </article> 
+    </div>
+  </div>
 
+</body>
+</html>
 

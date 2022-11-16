@@ -60,7 +60,7 @@ const questions = [
     type: 'input',
     name: 'engineer_name',
     message: 'Please enter the engineer\'s name',
-    default:'Worker',
+    default:'Dr. Dork',
     validate: require_input,
     },
     {
