@@ -43,24 +43,26 @@ const questions = [
     validate: require_input,
     },
 
-
-    // Todo: add logic for end of team
     // checkbox
     {
     type: 'checkbox',
     name: 'employee',
-    message: 'Please select Engineer/Intern',
+    message: 'Which type of team member would you like to add',
     choices: 
-    ['Engineer','Intern'],
+    ['Engineer','Intern', 'Done Building Team'],
     },
 
-  // todo: add logic for Engineer/Intern
+    // todo: add logic for Engineer/Intern
+   // Todo: add logic for end of team
     // if (employee === Engineer) {
+
+    // }
+    
     {
     type: 'input',
     name: 'engineer_name',
     message: 'Please enter the engineer\'s name',
-    default:'Dr. Dork',
+    default:'Smarty',
     validate: require_input,
     },
     {
@@ -85,22 +87,22 @@ const questions = [
     validate: require_input,
     },
 
-    // else{}
-
-    // todo: add logic for Engineer/Intern
+    // else if(employee === Intern){
     {
     type: 'checkbox',
     name: 'employee2',
-    message: 'Please select Engineer/Intern',
+    message: 'Which type of team member would you like to add',
     choices: 
-    ['Engineer','Intern'],
+    ['Engineer','Intern', 'Done Building Team'],
     },
+
+    // }
 
     {
     type: 'input',
     name: 'intern_name',
     message: 'Please enter the intern\'s name',
-    default: 'Shithead',
+    default: 'Student',
     validate: require_input,
     },
     {
@@ -123,6 +125,18 @@ const questions = [
     message: 'Please enter the intern\'s school',
     default:'UT Austin',
     validate: require_input,
+    },
+
+    // else{
+    //     return;
+    // }
+
+    {
+    type: 'checkbox',
+    name: 'employee3',
+    message: 'Which type of team member would you like to add',
+    choices: 
+    ['Engineer','Intern', 'Done Building Team'],
     },
 
 

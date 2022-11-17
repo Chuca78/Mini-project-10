@@ -1,24 +1,5 @@
-/*  COLOR PALLETTE
-    https://coolors.co/ffd275-c03221-72705b-1a1b41-28c2ff
-    #343434 - dark grey
-    #72705B - med grey
-    #2F3061 - dark blue
-    rgb(47,48,97) - dark blue
-    #28C2FF - light blue
-    #C03221 - dark orange
-    #FFD275 - light orange
-    #FFE66D - yellow
-    #F7FFF7 - almost white
-*/
 
 
-/*  FONT FAMILIES
-font-family: 'Caveat', cursive;
-font-family: 'Montserrat', sans-serif;
- */
-
-
-/* Global styles --------------------------------*/
 body{
     color: #343434;
     margin: 0;
@@ -48,7 +29,7 @@ h2{
 }
 
 .content-wrap{
-    /* sets default width of content inside of container (also centers it in container */
+    /* sets default width of content inside of container  */
     width:800px;
     text-align: center;
     /* removes top margins */
@@ -82,6 +63,7 @@ header{
 
 /* individual cards */
 .card {
+    font-weight:800;
     border: solid;
     border-color: #72705B;
     border-radius: 5%;
@@ -90,9 +72,15 @@ header{
     grid-template-rows: max-content 200px 1fr;
 }
 
-
-footer{
-    background: #343434;
-    color: #F7FFF7;
+a {
+    /* text-decoration: none; */
+    padding: 8px;
+    line-height:1.5;
 }
+
+a:hover{
+    /* removes the underline under the links */
+    text-decoration: none;
+}
+
 

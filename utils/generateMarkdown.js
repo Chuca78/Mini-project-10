@@ -35,7 +35,7 @@ function generateMarkdown(data) {
       </header>    
       <div class="content">
         <p>${data.manager_employee_id}</p>
-        <p>Email: ${data.manager_email}</p>
+        <a href=mailto:${data.manager_email}>  Email: ${data.manager_email}</a>
         <p>Office Number: ${data.manager_office_number}</p>
       </div>
       </article>
@@ -47,8 +47,8 @@ function generateMarkdown(data) {
       </header>    
       <div class="content">
         <p>Employee ID: ${data.engineer_id}</p>
-        <p>Email: ${data.engineer_email}</p>
-        <p>GitHub: ${data.engineer_github}</p>
+        <p><a href=mailto:${data.engineer_email}>  Email: ${data.engineer_email}</a></p>
+        <a href="https://github.com/${data.engineer_github}"> Github: ${data.engineer_github} </a> 
       </div>
       </article>
       <article class="card">
@@ -59,10 +59,11 @@ function generateMarkdown(data) {
         </header>    
         <div class="content">
           <p>Employee ID: ${data.intern_id}</p>
-          <p>Email: ${data.intern_email}</p>
+          <a href=mailto:${data.intern_email}>  Email: ${data.intern_email}</a>
           <p>School: ${data.intern_school}</p>
         </div>
       </article> 
+      
     </div>
   </div>
 
