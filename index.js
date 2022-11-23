@@ -1,5 +1,4 @@
 
-// todo: check variable names
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -75,8 +74,6 @@ const questionList=[
 },
 ]; 
 
-
-// todo: clean up this section
 function pull_Qs_by(employee_type){
     const question_shortlist=questionList.filter(function(question_object){
         return (question_object.for==='all' || question_object.for===employee_type);
@@ -98,7 +95,6 @@ async function generate_team_profile(){
     
     while (employee_type !=='done') {
         const typed_answer =await inquirer.prompt(pull_Qs_by(employee_type));
-
         switch(employee_type){
             case 'manager':
                 employee_list.push(new Manager(typed_answer.name, id, typed_answer.email, typed_answer.officeNumber));
@@ -120,11 +116,9 @@ async function generate_team_profile(){
 const renderHTML=render(employee_list);
 
 fs.access (OUTPUT_DIR, function(err){
-
     if (err){
         fs.mkdirSync(OUTPUT_DIR);
     };
-
     fs.writeFile(outputPath, renderHTML, function(err){
         if (err) throw err;
         console.log("Your new team profile has been generated and stored in the output folder as team.html")
