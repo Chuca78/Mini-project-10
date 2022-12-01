@@ -1,3 +1,5 @@
+
+// Tests the employee.js file and all of the functions in it
 const Employee = require("../lib/Employee");
 
 test("Verifies that new Employee instance is an object", () => {

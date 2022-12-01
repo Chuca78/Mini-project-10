@@ -11,6 +11,8 @@ const render = require("./lib/htmlRenderer");
 
 const questionList=[
 
+
+// Question 1 - capturing name (applies to all employees)
 {prompt:      
     {
     type: 'input',
@@ -20,6 +22,7 @@ const questionList=[
     for:'all'
 },
 
+// Question 2 - capturing email (applies to all employees)
 {prompt:
     {
     type: 'input',
@@ -29,6 +32,7 @@ const questionList=[
     for:'all'
 },
 
+// Question 3 - capturing office number (applies only to manager)
 {prompt:     
     {
     type: 'input',
@@ -39,6 +43,7 @@ const questionList=[
     for:'manager'
 },
 
+// Question 4 - capturing github user name (applies only to engineers)
 {prompt:         
     {
     type: 'input',
@@ -49,6 +54,7 @@ const questionList=[
     for:'engineer'
 },
 
+// Question 5 - capturing the school name (applies only to interns)
 {prompt:
     {
     type: 'input',
@@ -59,6 +65,7 @@ const questionList=[
     for:'intern'
 }, 
 
+// Prompt for the employee type, which feeds the function below
 {prompt:
     {
     type: "list", 
@@ -74,6 +81,7 @@ const questionList=[
 },
 ]; 
 
+// function to filter questions by employee selection
 function pull_Qs_by(employee_type){
     const question_shortlist=questionList.filter(function(question_object){
         return (question_object.for==='all' || question_object.for===employee_type);
@@ -87,6 +95,7 @@ function pull_Qs_by(employee_type){
     return modified_Qs;
 };
 
+// function that builds the team after all questions are answered
 generate_team_profile()
 async function generate_team_profile(){
     const employee_list=[];
@@ -106,13 +115,13 @@ async function generate_team_profile(){
 
              case 'intern':
                  employee_list.push(new Intern(typed_answer.name, id, typed_answer.email, typed_answer.school));
-                // Note that it is not necessary to break out of the block case
                 break;
         };
         id++;
         employee_type=typed_answer.position;
     };
 
+// writing the employee list to HTML file
 const renderHTML=render(employee_list);
 
 fs.access (OUTPUT_DIR, function(err){

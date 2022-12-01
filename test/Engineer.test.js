@@ -1,3 +1,5 @@
+
+// tests the engineer.js file
 const Engineer = require("../lib/Engineer");
 
 test("Verifies that GitHub is set via constructor argument", () => {

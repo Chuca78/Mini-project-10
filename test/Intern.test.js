@@ -1,3 +1,5 @@
+
+// tests the intern.js file
 const Intern = require("../lib/Intern");
 
 test("Verifies that school is set via constructor argument", () => {
