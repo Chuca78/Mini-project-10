@@ -30,6 +30,10 @@ To start the application, please type the following command in the terminal:
 node index
 ```
 
+[Untitled_ Nov 22, 2022 9_49 PM.webm](https://user-images.githubusercontent.com/97859682/203461406-58000b47-14de-4c20-a576-f976e7b71c8d.webm)
+
+
+
 ## Credits
 
 None
